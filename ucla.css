@@ -105,11 +105,10 @@ a:hover { text-decoration: underline; }
     position:relative;
     }
     #header {
-    padding:10px;
-    background:#5ee;
+    padding:0px;
     }
     #content {
-    padding:10px;
+    padding:0px;
     padding-bottom:80px; /* Height of the footer element */
     }
     #footer {
@@ -117,5 +116,4 @@ a:hover { text-decoration: underline; }
     position:absolute;
     bottom:0;
     left:0;
-    background:#ee5;
     }
