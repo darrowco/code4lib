@@ -113,6 +113,7 @@ a:hover { text-decoration: underline; }
     padding-bottom:80px; /* Height of the footer element */
     }
     #footer {
+    width:100%;
     position:absolute;
     bottom:0;
     left:0;
