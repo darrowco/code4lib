@@ -104,13 +104,6 @@ a:hover { text-decoration: underline; }
     min-height:100%;
     position:relative;
     }
-    #header {
-    padding:0px;
-    }
-    #content {
-    padding:0px;
-    padding-bottom:80px; /* Height of the footer element */
-    }
     #footer {
     width:100%;
     position:absolute;
