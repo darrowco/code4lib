@@ -11,7 +11,7 @@
   <!-- These are the styles you'll add to make the slides look great -->
   <link rel="stylesheet" href="css/styles.css" />
 
-  <title>Angular and Drupal | UCLA Library</title>
+  <title>CCLE Redirect | UCLA Library</title>
   </head>
 
 
@@ -45,8 +45,8 @@
     <div id="menu" class="l-navigation">
       <div class="l-region l-region--navigation">
         <div class="panel-pane pane-page-primary-links">
-          <div class="pane-content">
-	    Angular and Drupal
+          <div class="pane-content" style="white-space: nowrap">
+	    CCLE Redirect
           </div>
         </div>
       </div>
@@ -67,7 +67,7 @@
 
 <div id="content">
   <header>
-    <h1>Example Slide Show</h1>
+    <h1><a href="">Start</a></h1>
     <nav>
       <ul>
         <li><button id="prev-btn" title="Previous slide">Previous Slide</button></li>
@@ -79,14 +79,157 @@
   <div id="deck">
     
     <!-- Begin slides -->
+    <!-- Begin slides -->
+    <!-- Begin slides -->
     <section>
       <hgroup>
-        <h1>Hello, interwebs explorer.</h1>
-        <h2>How to use this thing</h2>
+        <br>
+        <br>
+        <br>
+        <h1>UCLA Library CCLE Redirect</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2>Darrow Cole</h2>
       </hgroup>
-      <p>Press the right arrow, down arrow, or spacebar to advance; press the left arrow or up arrow to move backward.</p>
-  		<p>You can also click the left and right arrows in the control bar at the top.</p>
     </section>
+
+    
+    <section>
+      <hgroup>
+        <h1>Requirements</h1>
+        <h2>Developed in conjunction with the project committee</h2>
+      </hgroup>
+      <ul>
+        <li class="action">Must work with our CMS ===> Drupal Module</li>
+        <li class="action">Minimize db access</li>
+        <li class="action">Require no special knowledge to create incoming link</li>
+        <li class="action">Accommodate multiple guides per class</li>
+        <li class="action">Return the most detailed applicable LibGuide</li>
+      </ul>
+    </section>
+    
+    
+    <section>
+      <hgroup>
+        <h1>CCLE Redirect - case #1</h1>
+        <h2>Basic Idea: Go to the LibGuide when the class link is clicked</h2>
+      </hgroup>
+      <img src="images/drawing.svg" alt="One LibGuide" />
+    </section>
+
+    
+    <section>
+      <hgroup>
+        <h1>CCLE Redirect - case #2</h1>
+        <h2>A bit more complicated</h2>
+      </hgroup>
+      <img src="images/drawing2.svg" alt="Many LibGuides" />
+    </section>
+
+    
+    <section>
+      <hgroup>
+        <h1>CCLE Redirect - case #3</h1>
+        <h2>And, a bit more</h2>
+      </hgroup>
+      <img src="images/drawing3.svg" alt="Many LibGuides" />
+    </section>
+
+    
+    <section>
+      <hgroup>
+        <h1>Basic Approach</h1>
+        <h2>Mapping the link</h2>
+      </hgroup>
+      <ul>
+        <li class="action">So, given this: http://www.mysite.edu/econ_101</li>
+        <li class="action">How do I go to this: http://www.mysite.edu/econ_101_class_guide</li>
+      </ul>
+    </section>
+    
+    
+    <section>
+      <hgroup>
+        <h1>Logic Flow</h1>
+        <h2>Read and cycle</h2>
+      </hgroup>
+      <img src="images/drawing4.svg" alt="Many LibGuides" />
+    </section>
+
+    
+    <section>
+      <hgroup>
+        <h1>Logic Flow</h1>
+        <h2>Code Sample</h2>
+      </hgroup>
+  	  <pre>
+foreach ($rows as $row) {
+
+if( $row['term'] == $term_submitted[$i] ){
+    if( strlen( $row['crsidx'] ) > 0 ){
+        if( $row['crsidx'] == $category_submitted[$i] ){
+            if( strlen( $row['classidx'] ) > 0 ){
+                if( $row['classidx'] == $section_submitted[$i] ){
+                    $rd_class[$i] = $row['lib_guide'];
+                }
+            }
+        }
+    }
+}
+  	  </pre>	
+    </section>
+
+    
+    <section>
+      <hgroup>
+        <h1>Code and Links</h1>
+      </hgroup>
+        <br>
+        <br>
+        <br>
+        <br>
+	<h2>--- <a href="https://github.com/BluesparkLabs/UCLALIB/tree/master/www/sites/all/modules/custom/ccle_redirect">CCLE Redirect code on github</a></h2>
+        <h2>--- <a href="http://darrowco.github.io/code4lib/slideshow2.htm#1">Link to these slides</a></h2>
+        <h2>--- How these slides were made and hosted on github</h2>
+    </section>
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <section>
       <hgroup>
         <h1>Intraslide animation</h1>
@@ -204,7 +347,8 @@ htmlSlides.init({ toolbar: true });
         <div class="panel-pane pane-block pane-menu-menu-footer">
           <div class="pane-content">
             <ul class="menu">
-              <li class="first last leaf"><span title="" class="footer-copyright nolink">2014 &copy; UC Regents</span></li>
+              <li class="first last leaf"><span title="" class="footer-copyright nolink"></span></li>
+              <!--<li class="first last leaf"><span title="" class="footer-copyright nolink">2014 &copy; UC Regents</span></li>-->
             </ul>
           </div>
         </div>
