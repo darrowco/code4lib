@@ -14,9 +14,17 @@
    id="svg2985"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="angular2.svg">
+   sodipodi:docname="angular6.svg">
   <defs
      id="defs2987">
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4332"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4303"
+       is_visible="true" />
     <marker
        inkscape:stockid="Arrow1Sstart"
        orient="auto"
@@ -395,6 +403,62 @@
          style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
          transform="matrix(-0.8,0,0,-0.8,-10,0)" />
     </marker>
+    <filter
+       id="filter3825-1-7"
+       inkscape:menu-tooltip="Draws a black outline around"
+       inkscape:menu="ABCs"
+       inkscape:label="Black outline"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         id="feGaussianBlur3827-8-4"
+         stdDeviation="2"
+         in="SourceAlpha"
+         result="result0" />
+      <feComposite
+         k4="0"
+         k1="0"
+         id="feComposite3829-5-8"
+         in2="result0"
+         result="result3"
+         operator="arithmetic"
+         in="SourceGraphic"
+         k2="1"
+         k3="10" />
+      <feComposite
+         id="feComposite3831-0-9"
+         in2="result3"
+         operator="in"
+         in="result3"
+         result="result4" />
+    </filter>
+    <filter
+       id="filter3825-1-7-0"
+       inkscape:menu-tooltip="Draws a black outline around"
+       inkscape:menu="ABCs"
+       inkscape:label="Black outline"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         id="feGaussianBlur3827-8-4-0"
+         stdDeviation="2"
+         in="SourceAlpha"
+         result="result0" />
+      <feComposite
+         k4="0"
+         k1="0"
+         id="feComposite3829-5-8-0"
+         in2="result0"
+         result="result3"
+         operator="arithmetic"
+         in="SourceGraphic"
+         k2="1"
+         k3="10" />
+      <feComposite
+         id="feComposite3831-0-9-6"
+         in2="result3"
+         operator="in"
+         in="result3"
+         result="result4" />
+    </filter>
   </defs>
   <sodipodi:namedview
      inkscape:document-units="mm"
@@ -404,9 +468,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="335.12057"
+     inkscape:cx="160.12057"
      inkscape:cy="236.92758"
-     inkscape:current-layer="g4189"
+     inkscape:current-layer="layer1"
      id="namedview2989"
      showgrid="false"
      inkscape:window-width="1600"
@@ -427,7 +491,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -437,7 +501,18 @@
      id="layer1"
      transform="translate(-65.230576,-108.25472)">
     <g
-       id="g4189">
+       id="g9528-8"
+       transform="matrix(0.43633283,0,0,0.40258872,347.57085,13.147076)">
+      <g
+         id="g9754"
+         transform="translate(-13.231636,-33.938039)">
+        <g
+           id="g10313"
+           transform="translate(-5.6707014,55.149314)" />
+      </g>
+    </g>
+    <g
+       id="g9402">
       <g
          transform="matrix(0.33152317,0,0,0.290654,122.47938,368.41863)"
          id="g9515">
@@ -541,7 +616,7 @@
          id="rect3000-2"
          style="fill:#e6e6e6" />
       <text
-         transform="scale(1.0679939,0.93633492)"
+         transform="scale(1.0679939,0.93633493)"
          sodipodi:linespacing="125%"
          id="text3028-5"
          y="153.52007"
@@ -596,17 +671,6 @@
              x="567.0144"
              y="483.97696"
              id="tspan9668">(JAVA)</tspan></text>
-      </g>
-      <g
-         transform="matrix(0.43633283,0,0,0.40258872,347.57085,13.147076)"
-         id="g9528-8">
-        <g
-           transform="translate(-13.231636,-33.938039)"
-           id="g9754">
-          <g
-             transform="translate(-5.6707014,55.149314)"
-             id="g10313" />
-        </g>
       </g>
       <path
          inkscape:connector-curvature="0"
@@ -707,6 +771,106 @@
          id="path7447-3-3-0"
          d="M 687.44932,491.99534 574.60953,375.16457"
          style="fill:none;stroke:#000000;stroke-width:1.72768998;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Lstart);marker-end:url(#Arrow1Lend)" />
+      <g
+         id="g8743">
+        <g
+           id="g4467"
+           transform="translate(-166,34)"
+           style="fill:#ffff00">
+          <text
+             transform="scale(0.89383932,1.1187693)"
+             sodipodi:linespacing="125%"
+             id="text4463"
+             y="156.33246"
+             x="524.18774"
+             style="font-size:18.42944336px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffff00;fill-opacity:1;stroke:none;font-family:Sans"
+             xml:space="preserve"><tspan
+               y="156.33246"
+               x="524.18774"
+               id="tspan4465"
+               sodipodi:role="line">Module</tspan></text>
+        </g>
+        <g
+           id="g9396">
+          <rect
+             style="fill:#ffff00;fill-opacity:0.96808532000000003;filter:url(#filter3825-1-7)"
+             id="rect3000-6-5-1"
+             width="299.01434"
+             height="406.07828"
+             x="609.76483"
+             y="264.33774"
+             ry="47.359413"
+             transform="matrix(0.22717176,0,0,0.17468137,159.74543,136.98348)" />
+          <text
+             transform="scale(0.98236921,1.0179472)"
+             sodipodi:linespacing="125%"
+             id="text4510"
+             y="203.09038"
+             x="336.46823"
+             style="font-size:15.96086502px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+             xml:space="preserve"><tspan
+               y="203.09038"
+               x="336.46823"
+               id="tspan4512"
+               sodipodi:role="line">Module</tspan><tspan
+               id="tspan8741"
+               y="223.04146"
+               x="336.46823"
+               sodipodi:role="line">#1</tspan></text>
+        </g>
+      </g>
+      <g
+         id="g8743-6"
+         transform="translate(19.999989,19.999995)">
+        <g
+           id="g4467-0"
+           transform="translate(-166,34)"
+           style="fill:#ffff00">
+          <rect
+             transform="matrix(0.22717176,0,0,0.17468137,325.74543,102.98348)"
+             ry="47.359413"
+             y="264.33774"
+             x="609.76483"
+             height="406.07828"
+             width="299.01434"
+             id="rect3000-6-5-1-2"
+             style="fill:#ffff00;fill-opacity:0.96808543;filter:url(#filter3825-1-7-0)" />
+          <text
+             transform="scale(0.89383932,1.1187693)"
+             sodipodi:linespacing="125%"
+             id="text4463-5"
+             y="156.33246"
+             x="524.18774"
+             style="font-size:18.42944336px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffff00;fill-opacity:1;stroke:none;font-family:Sans"
+             xml:space="preserve"><tspan
+               y="156.33246"
+               x="524.18774"
+               id="tspan4465-6"
+               sodipodi:role="line">Module</tspan></text>
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-size:15.96086502px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+           x="336.46823"
+           y="203.09038"
+           id="text4510-4"
+           sodipodi:linespacing="125%"
+           transform="scale(0.98236921,1.0179472)"><tspan
+             sodipodi:role="line"
+             id="tspan4512-7"
+             x="336.46823"
+             y="203.09038">Module</tspan><tspan
+             sodipodi:role="line"
+             x="336.46823"
+             y="223.04146"
+             id="tspan8741-1">#2</tspan></text>
+      </g>
+      <path
+         sodipodi:nodetypes="csssssc"
+         inkscape:connector-curvature="0"
+         id="path4346"
+         d="m 704.23058,234.62551 c -16.25873,20.46417 -17.47591,20 -51,55 -17.96694,18.75794 -26.74981,34.69236 -38.56294,44.90809 -51.19362,44.27108 -63.42867,16.56878 -40.3403,42.04132 41.5855,45.87974 13.35424,13.20075 35.79167,36.98576 25.44412,26.97228 9.15646,8.41576 43.24396,49.41716 30.20268,36.32863 22.86761,18.11914 55.86761,54.64767"
+         style="opacity:0.58264465;fill:none;stroke:#21e913;stroke-width:14.17322826;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.93236712;stroke-dasharray:none" />
     </g>
   </g>
 </svg>
