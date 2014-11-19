@@ -128,7 +128,6 @@
         <li class="action">Federated authentication</li>
         <li class="action">Compatibility with existing reservations system</li>
         <li class="action">Secure connection</li>
-        <li class="action"></li>
       </ul>
     </section>
     
@@ -144,74 +143,167 @@
     
     <section>
       <hgroup>
-        <h1>CCLE Redirect - case #2</h1>
-        <h2>A bit more complicated</h2>
+        <h1>Shibboleth</h1>
+        <h2>Federated Single Sign-On Authentication Service</h2>
       </hgroup>
-      <img src="images/drawing2.svg" alt="Many LibGuides" />
+      <img src="images/angular3.svg" alt="Shibboleth provides authentication and a secure connection" />
     </section>
 
     
     <section>
       <hgroup>
-        <h1>CCLE Redirect - case #3</h1>
-        <h2>And, a bit more</h2>
+        <h1>Drupal Module</h1>
+        <h2>Start with a Drupal Module - which injects the Angular</h2>
       </hgroup>
-      <img src="images/drawing3.svg" alt="Many LibGuides" />
+      <img src="images/angular4.svg" alt="Shibboleth provides authentication and a secure connection" />
     </section>
 
     
     <section>
       <hgroup>
-        <h1>Possible Guides for one Class</h1>
-        <h2></h2>
+        <h1>Access Web Services Server</h1>
+        <h2>Angular access the WS through a second Drupal Module</h2>
       </hgroup>
-        <h2>Department Guide ( subject )</h3>
-        <h2>Course Guide ( course )</h3>
-        <h2>Section Guide ( class )</h3>
-    </section>
-    
-    
-    <section>
-      <hgroup>
-        <h1>Basic Approach</h1>
-        <h2>Mapping the link</h2>
-      </hgroup>
-      <ul>
-        <li class="action">So, given this: http://www.mysite.edu/econ_101</li>
-        <li class="action">How do I go to this: http://www.mysite.edu/econ_101_class_guide</li>
-      </ul>
-    </section>
-    
-    
-    <section>
-      <hgroup>
-        <h1>Logic Flow</h1>
-        <h2>Read and cycle</h2>
-      </hgroup>
-      <img src="images/drawing4.svg" alt="Many LibGuides" />
+      <img src="images/angular5.svg" alt="Shibboleth provides authentication and a secure connection" />
     </section>
 
     
     <section>
       <hgroup>
-        <h1>Logic Flow</h1>
-        <h2>Code Sample</h2>
+        <h1>Access 3rd-party services</h1>
+        <h2>Web Services accesses other services as needed</h2>
       </hgroup>
-  	  <pre>
-foreach ($rows as $row) {
+      <img src="images/angular6.svg" alt="Shibboleth provides authentication and a secure connection" />
+    </section>
 
-if( $row['term'] == $term_submitted[$i] ){
-    if( strlen( $row['crsidx'] ) > 0 ){
-        if( $row['crsidx'] == $category_submitted[$i] ){
-            if( strlen( $row['classidx'] ) > 0 ){
-                if( $row['classidx'] == $section_submitted[$i] ){
-                    $rd_class[$i] = $row['lib_guide'];
-                }
-            }
-        }
-    }
+    
+    <section>
+      <hgroup>
+        <h1>JSON in the Web Page</h1>
+        <h2>The JSON is processed by Angular</h2>
+      </hgroup>
+      <img src="images/angular5.svg" alt="Shibboleth provides authentication and a secure connection" />
+    </section>
+
+    
+    <section>
+      <hgroup>
+        <h1>JSON in the Web Page</h1>
+        <h2>JSON data displayed by Ag in standard UCLA Library page</h2>
+      </hgroup>
+      <img src="images/json_in_browser.png" alt="Web page with JSON data" />
+    </section>
+
+    
+    <section>
+      <hgroup>
+        <h1>Main Files</h1>
+        <h2>Drupal modules and Angular</h2>
+      </hgroup>
+	<br>
+	<br>
+	<br>
+        <h2>Module #1</h2>
+        <h2>Module #2</h2>
+        <h2>Angular Library</h2>
+        <h2>Angular Application</h2>
+    </section>
+
+    
+    <section>
+      <hgroup>
+        <h1>Some Code</h1>
+        <h2>Module #1</h2>
+      </hgroup>
+<pre>
+/**
+ * ag_res page callback
+ */
+function all_ag_res_page() {
+  // Get the UID from Drupal
+  $ucuid = "502673598";
+  
+  // Set the path
+  $path = drupal_get_path('module', 'ag_res');
+
+  // Load angular
+  drupal_add_library('angularjs', 'angularjs');
+
+  // Load the app
+  drupal_add_js($path . '/js/ag_res.gen.js');
+
+  // drupal_add_css($path . '/css/bootstrap.css');
+
+  // Return the HTML template
+  return theme('all_ag_res');
 }
-  	  </pre>	
+</pre>
+      </section>
+
+    
+    <section>
+      <hgroup>
+        <h1>Some Code</h1>
+        <h2>The Angular App</h2>
+      </hgroup>
+<pre>
+var ag_res = angular.module('ag_res', []);
+
+jQuery(document).ready(function() {
+  /**
+   * We are initialization the angular app by hand and not with the Automatic
+   * Initialization.
+   * The reason for this is that we are loading multiple angular apps on one
+   * page and the Automatic Initialization can only handle 1 app per page.
+   *
+   * @link http://docs.angularjs.org/guide/bootstrap
+   */
+  angular.bootstrap(document.getElementById('ag_res-app'),['ag_res']);
+});
+ag_res.controller('ag_resController', function ($scope, $http) {
+  $scope.foobar= 'Controller Tests OK';
+  
+  $http.get('http://uclalib.local/UCLALIB/www/ajaxx').success(function (result) {
+    $scope.ag_res = (function() {
+      return result;
+    })();
+  });
+});
+</pre>
+      </section>
+
+    
+    <section>
+      <hgroup>
+        <h1>Some Code</h1>
+        <h2>Module #2</h2>
+      </hgroup>
+<pre>
+// get any existing patron reservations
+$dev_host_resource_base = 'https://webservices.library.ucla.edu';
+$url_stack = 
+"$dev_host_resource_base"."/rcres/currentreservations/for/"."$working_uid";
+$url = $url_stack;
+$options = array(
+	"headers" => array(
+	    "Pragma" => "no-cache",
+	    "Cache-Control" => "no-cache",
+	),
+);
+$response_voy = drupal_http_request($url, $options);
+$patron_reservations = $response_voy->data;
+$patron_reservations = drupal_json_decode($patron_reservations);
+return drupal_json_output($patron_reservations);
+</pre>
+      </section>
+
+    
+    <section>
+      <hgroup>
+        <h1>Overview</h1>
+        <h2>Transaction diagram</h2>
+      </hgroup>
+      <img src="images/angular99.svg" alt="Diagram of transactions" />
     </section>
 
     
@@ -223,8 +315,8 @@ if( $row['term'] == $term_submitted[$i] ){
         <br>
         <br>
         <br>
-	<h2>--- <a href="https://github.com/BluesparkLabs/UCLALIB/tree/master/www/sites/all/modules/custom/ccle_redirect">CCLE Redirect code on github</a> (login required)</h2>
-        <h2>--- <a href="http://darrowco.github.io/code4lib/slideshow2.html">Link to these slides</a></h2>
+	<h2>--- <a href="https://github.com/BluesparkLabs/UCLALIB/tree/master/www/sites/all/modules/custom/ag-res">Angular Reservations code on github</a> (login required)</h2>
+        <h2>--- <a href="http://darrowco.github.io/code4lib/angular.html">Link to these slides</a></h2>
         <h2>--- How these slides were made and hosted on github</h2>
         <h2>--- darrowco@library.ucla.edu</h2>
     </section>
