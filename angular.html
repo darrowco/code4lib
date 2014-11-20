@@ -224,12 +224,8 @@ function all_ag_res_page() {
   $path = drupal_get_path('module', 'ag_res');
   drupal_add_library('angularjs', 'angularjs');
 
-  // Load the app
+  // Load the app and return theme
   drupal_add_js($path . '/js/ag_res.gen.js');
-
-  // drupal_add_css($path . '/css/bootstrap.css');
-
-  // Return the HTML template
   return theme('all_ag_res');
 }
 </pre>
@@ -243,21 +239,17 @@ function all_ag_res_page() {
       </hgroup>
 <pre>
 var ag_res = angular.module('ag_res', []);
-
 jQuery(document).ready(function() {
-  /**
-   * Iitialize the angular app by hand for multiple apps
-   */
-  angular.bootstrap(document.getElementById('ag_res-app'),['ag_res']);
-});
+
+// Iitialize the angular app by hand for multiple apps
+  angular.bootstrap(document.getElementById('ag_res-app'),['ag_res']); });
+
 ag_res.controller('ag_resController', function ($scope, $http) {
-  $scope.foobar= 'Controller Tests OK';
   $http.get('http://uclalib.local/UCLALIB/www/ajaxx').success(function (result) {
     $scope.ag_res = (function() {
       return result;
     })();
-  });
-});
+  });  });
 </pre>
       </section>
 
@@ -270,15 +262,12 @@ ag_res.controller('ag_resController', function ($scope, $http) {
 <pre>
 // get any existing patron reservations
 $dev_host_resource_base = 'https://webservices.library.ucla.edu';
-$url_stack = 
+$url = 
 "$dev_host_resource_base"."/rcres/currentreservations/for/"."$working_uid";
-$url = $url_stack;
 $options = array(
 	"headers" => array(
 	    "Pragma" => "no-cache",
-	    "Cache-Control" => "no-cache",
-	),
-);
+	    "Cache-Control" => "no-cache", ), );
 $response_voy = drupal_http_request($url, $options);
 $patron_reservations = $response_voy->data;
 $patron_reservations = drupal_json_decode($patron_reservations);
