@@ -216,17 +216,12 @@
         <h2>Module #1</h2>
       </hgroup>
 <pre>
-/**
- * ag_res page callback
- */
 function all_ag_res_page() {
   // Get the UID from Drupal
   $ucuid = "502673598";
   
-  // Set the path
+  // Set the path and load Angular
   $path = drupal_get_path('module', 'ag_res');
-
-  // Load angular
   drupal_add_library('angularjs', 'angularjs');
 
   // Load the app
@@ -251,18 +246,12 @@ var ag_res = angular.module('ag_res', []);
 
 jQuery(document).ready(function() {
   /**
-   * We are initialization the angular app by hand and not with the Automatic
-   * Initialization.
-   * The reason for this is that we are loading multiple angular apps on one
-   * page and the Automatic Initialization can only handle 1 app per page.
-   *
-   * @link http://docs.angularjs.org/guide/bootstrap
+   * Iitialize the angular app by hand for multiple apps
    */
   angular.bootstrap(document.getElementById('ag_res-app'),['ag_res']);
 });
 ag_res.controller('ag_resController', function ($scope, $http) {
   $scope.foobar= 'Controller Tests OK';
-  
   $http.get('http://uclalib.local/UCLALIB/www/ajaxx').success(function (result) {
     $scope.ag_res = (function() {
       return result;
