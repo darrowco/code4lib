@@ -9,8 +9,8 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="864.54144"
-   height="597.6463"
+   width="751.6568"
+   height="450.76089"
    id="svg2985"
    version="1.1"
    inkscape:version="0.48.4 r9939"
@@ -20,28 +20,30 @@
     <marker
        inkscape:stockid="Arrow1Sstart"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="Arrow1Sstart"
        style="overflow:visible">
       <path
          id="path4577"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt"
-         transform="scale(0.2) translate(6,0)" />
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.2,0,0,0.2,1.2,0)"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:stockid="Arrow1Lend"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="Arrow1Lend"
-       style="overflow:visible;">
+       style="overflow:visible">
       <path
          id="path4568"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;"
-         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         inkscape:connector-curvature="0" />
     </marker>
     <marker
        inkscape:stockid="Arrow1Lstart"
@@ -75,11 +77,12 @@
          operator="arithmetic"
          in="SourceGraphic"
          k2="1"
-         k3="10" />
+         k3="10"
+         k1="0"
+         k4="0" />
       <feComposite
          id="feComposite3017"
          in2="result3"
-         k2="1"
          operator="in"
          in="result3"
          result="result4" />
@@ -102,11 +105,12 @@
          operator="arithmetic"
          in="SourceGraphic"
          k2="1"
-         k3="10" />
+         k3="10"
+         k1="0"
+         k4="0" />
       <feComposite
          id="feComposite3831"
          in2="result3"
-         k2="1"
          operator="in"
          in="result3"
          result="result4" />
@@ -120,8 +124,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="393.6134"
-     inkscape:cy="344.7181"
+     inkscape:cx="218.6134"
+     inkscape:cy="197.83268"
      inkscape:current-layer="layer1"
      id="namedview2989"
      showgrid="false"
@@ -151,96 +155,100 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-51.237747,-104.76974)">
-    <rect
-       style="fill:#e6e6e6"
-       id="rect3000"
-       width="413.01434"
-       height="576.07825"
-       x="51.237747"
-       y="104.76974"
-       ry="67.18589" />
-    <rect
-       style="fill:#e6e6e6;filter:url(#filter3825)"
-       id="rect3000-6"
-       width="299.01434"
-       height="406.07828"
-       x="609.76483"
-       y="264.33774"
-       ry="47.359413" />
-    <text
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="256.87579"
-       y="188.8914"
-       id="text3028"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3030"
+    <g
+       id="g3012"
+       transform="matrix(0.85125803,0,0,0.75587794,7.6212035,25.576604)">
+      <rect
+         ry="67.18589"
+         y="104.76974"
+         x="51.237747"
+         height="576.07825"
+         width="413.01434"
+         id="rect3000"
+         style="fill:#e6e6e6" />
+      <rect
+         ry="47.359413"
+         y="264.33774"
+         x="609.76483"
+         height="406.07828"
+         width="299.01434"
+         id="rect3000-6"
+         style="fill:#e6e6e6;filter:url(#filter3825)" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3028"
+         y="188.8914"
          x="256.87579"
-         y="188.8914">Reservation App</tspan><tspan
-         sodipodi:role="line"
-         x="256.87579"
-         y="238.8914"
-         id="tspan9511">Web Page</tspan><tspan
-         sodipodi:role="line"
-         x="256.87579"
-         y="288.89142"
-         id="tspan9513" /></text>
-    <rect
-       style="fill:#e6e6e6;filter:url(#filter3011)"
-       id="rect3000-6-6"
-       width="299.01434"
-       height="406.07828"
-       x="110.73059"
-       y="235.37689"
-       ry="47.359413"
-       transform="matrix(1,0,0,0.89944467,-2.4928436,68.585064)" />
-    <text
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="257.49103"
-       y="330.4512"
-       id="text3019"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3021"
-         x="257.49103"
+         style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           y="188.8914"
+           x="256.87579"
+           id="tspan3030"
+           sodipodi:role="line">Reservation App</tspan><tspan
+           id="tspan9511"
+           y="238.8914"
+           x="256.87579"
+           sodipodi:role="line">Web Page</tspan><tspan
+           id="tspan9513"
+           y="288.89142"
+           x="256.87579"
+           sodipodi:role="line" /></text>
+      <rect
+         transform="matrix(1,0,0,0.89944467,-2.4928436,68.585064)"
+         ry="47.359413"
+         y="235.37689"
+         x="110.73059"
+         height="406.07828"
+         width="299.01434"
+         id="rect3000-6-6"
+         style="fill:#e6e6e6;filter:url(#filter3011)" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3019"
          y="330.4512"
-         style="text-align:center;text-anchor:middle">AngularJS</tspan><tspan
-         sodipodi:role="line"
          x="257.49103"
-         y="380.4512"
-         id="tspan3023"
-         style="text-align:center;text-anchor:middle">Embedded</tspan><tspan
-         sodipodi:role="line"
-         x="257.49103"
-         y="430.4512"
-         id="tspan3025"
-         style="text-align:center;text-anchor:middle">Single-Page</tspan><tspan
-         sodipodi:role="line"
-         x="257.49103"
-         y="480.4512"
-         id="tspan3027"
-         style="text-align:center;text-anchor:middle">Application</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="692.34814"
-       y="334.41605"
-       id="text3029"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3031"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="text-align:center;text-anchor:middle"
+           y="330.4512"
+           x="257.49103"
+           id="tspan3021"
+           sodipodi:role="line">AngularJS</tspan><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan3023"
+           y="380.4512"
+           x="257.49103"
+           sodipodi:role="line">Embedded</tspan><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan3025"
+           y="430.4512"
+           x="257.49103"
+           sodipodi:role="line">Single-Page</tspan><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan3027"
+           y="480.4512"
+           x="257.49103"
+           sodipodi:role="line">Application</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3029"
+         y="334.41605"
          x="692.34814"
-         y="334.41605">Drupal</tspan><tspan
-         sodipodi:role="line"
-         x="692.34814"
-         y="384.41605"
-         id="tspan3033">Server</tspan></text>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:2.05985427;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Lstart);marker-end:url(#Arrow1Lend)"
-       d="m 413.49602,491.41604 193.48346,0"
-       id="path7447"
-       inkscape:connector-curvature="0" />
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           y="334.41605"
+           x="692.34814"
+           id="tspan3031"
+           sodipodi:role="line">Drupal</tspan><tspan
+           id="tspan3033"
+           y="384.41605"
+           x="692.34814"
+           sodipodi:role="line">Server</tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="path7447"
+         d="m 413.49602,491.41604 193.48346,0"
+         style="fill:none;stroke:#000000;stroke-width:2.05985427;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Lstart);marker-end:url(#Arrow1Lend)" />
+    </g>
   </g>
 </svg>
